@@ -1,0 +1,70 @@
+/* Home.css */
+
+.Home {
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+.title-carousel {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.title-carousel h2 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.carousel {
+  overflow: hidden; /* importante para o scroll lateral */
+  cursor: grab;
+  padding-bottom: 10px;
+}
+
+.inner {
+  display: flex;
+  gap: 20px;
+}
+
+/* .item {
+  min-width: 600px;  /* define a largura do item */
+  /* flex-shrink: 0;     /* evita que encolha */
+  /* background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+} */ */ */
+
+
+.item:hover {
+  transform: scale(1.05);
+}
+
+.item img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.item p {
+  padding: 10px;
+  font-weight: bold;
+  color: #555;
+}
+
+.item a {
+  display: inline-block;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #007bff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.item a:hover {
+  background-color: #0056b3;
+}
