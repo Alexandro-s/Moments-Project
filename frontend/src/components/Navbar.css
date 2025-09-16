@@ -1,20 +1,99 @@
-nav {
+header {
+    padding: 1rem 3rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 3rem;
-    background-color: blueviolet;
-
-    
+   background-color: #23232e;
+    letter-spacing: 3px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+     
 }
 
-ul {
+.logo-container {
     display: flex;
-    gap: 1rem;
-    padding-right: 1rem;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-container .logo {
+    width: 40px;
+    height: auto;
+}
+
+
+.menu-sadwich {
+    display: none;
+}
+
+.show {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* divide espaço entre links e footer */
+    position: fixed; /* ocupa a tela inteira do topo ao rodapé */
+    top: 0;
+    right: 0;
+    width: 30vw;
+    height: 100vh;
+    background-color: #23232e;
+    z-index: 9;
+    padding: 2rem 1rem;
+
     
 }
 
-nav a {
-    color: aliceblue;
+.nave-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1; /* ocupa o espaço vertical */
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+  
+
 }
+
+.nave-list li a {
+    display: inline-block;
+    color:#E6E6FA;
+    text-decoration: none;
+    font-size: 1.4rem;
+    transition: color 0.3s ease;
+    border-bottom: solid;
+    padding: 0 2rem;
+    bottom: 1rem;
+    border: solid  #E6E6FA ;
+
+     
+}
+
+.nave-list li a:hover {
+    color:#E6E6FA ;
+}
+
+/* footer dentro do menu */
+
+
+.btn-sadwich {
+    font-size: 2rem;
+  color: #E6E6FA;
+    cursor: pointer;
+    z-index: 11;
+
+}
+
+main {
+  
+}
+
+
+
+
+
+

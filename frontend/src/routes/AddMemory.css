@@ -1,46 +1,103 @@
+.addMemory {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-
-.addMemory h2 {
-    text-align: center;
-    padding: 2rem 0  1rem ;
-
+  background: black url("../assets/img-1.jpg") no-repeat center center;
+  background-size: contain; /* imagem inteira */
 }
- form {
 
+
+/* título */
+.addMemory h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color:#303031  ; /* se a imagem for escura */
+   border: solid  #000000;
+}
+
+/* form centralizado dentro do fundo */
+form {
+  
+  background-color: #0d0d0d;
   padding: 2rem;
+  /* border-radius: 1rem; */
+  border: solid  #E6E6FA;
   max-width: 600px;
   margin: 0 auto;
   margin-bottom: 1rem;
 
-
-
-
 }
 
-
-
- label {
+/* labels */
+label {
   display: flex;
   flex-direction: column;
   margin-bottom: 0.8rem;
-  gap: 0 .5rem;
+  gap: 0.5rem;
+  color: #E6E6FA;
   
 }
 
+ form input {
+  border: none;
+  border-bottom: 2px solid #ccc;
+  background: transparent;
+  outline: none;
+  padding: 8px 0;
+  font-size: 16px;
+   color: #E6E6FA;
+}
+
+form textarea {
+  border: none;
+  border-bottom: 2px solid #ccc;
+  background-color: transparent;
+  outline: none;
+  padding: 8px 0;
+  font-size: 16px;
+  color: #fff;
+
+
+}
+
+.custom-upload {
+  background: #E6E6FA;
+  color: rgb(0, 0, 0);
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  gap: 1rem;
+  
+}
+
+.custom-upload:hover {
+ background: #d1d1e4;
+}
+
+
+/* botão */
 .btn {
-    background-color: blueviolet;
-    color: black;
-    border-radius: 5px;
-    padding: .6rem 1rem;
-    max-width: 120px;
-    text-align: center;
-    border: none;
-    opacity: 0.8;
-    transition: 0.3s;
-    cursor: pointer;
+  background: #9370DB;
+  color:#E6E6FA;
+  border-radius: 5px;
+  padding: 0.6rem 1rem;
+  max-width: 120px;
+  text-align: center;
+  border: none;
+  opacity: 0.8;
+  transition: 0.3s;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  letter-spacing: 2px;
 }
 
 .btn:hover {
-    opacity: 1;
+  opacity: 1;
 }
+
 

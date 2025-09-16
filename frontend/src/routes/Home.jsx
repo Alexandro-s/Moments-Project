@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import './Home.css';
 import api from "../axios-config";
+import { FaRegComment } from "react-icons/fa";
 
 const Home = () => {
   const [memories, setMemories] = useState([]);
@@ -43,14 +44,20 @@ const Home = () => {
           className='inner'
           drag="x"
           dragConstraints={{ right: 0, left: -width }}
+          // dragMomentum={false}
+          // dragElastic={0.5}
+          dragTransition={{
+            power:0.2,
+            timeConstant:200
+          }}
           whileTap={{ cursor: "grabbing" }}
         >
           {memories.length > 0 ? (
             memories.map(memory => (
               <motion.div className='item' key={memory._id}>
                 <img src={`${api.defaults.baseURL}/${memory.src}`} alt={memory.title} />
-                <p>{memory.title}</p>
-                <Link to={`/memories/${memory._id}`}>Comentar</Link>
+                {/* <p>{memory.title}</p> */}
+                <Link to={`/memories/${memory._id}`}><FaRegComment /></Link>
               </motion.div>
             ))
           ) : (
