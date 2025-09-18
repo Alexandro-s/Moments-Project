@@ -7,6 +7,7 @@ import { FaRegComment } from "react-icons/fa";
 
 const Home = () => {
   const [memories, setMemories] = useState([]);
+  const [isHoveringItem, setIsHoveringItem] = useState(false)
 
 
   const carousel = useRef();
@@ -34,7 +35,7 @@ const Home = () => {
   }, [memories]);
 
   return (
-    <div className="Home">
+    <div className={`Home ${isHoveringItem ? "no-shadow" : ""}`}>
       <div className="title-carousel">
         <h2>Create publication</h2>
       </div>
@@ -47,15 +48,23 @@ const Home = () => {
           // dragMomentum={false}
           // dragElastic={0.5}
           dragTransition={{
-            power:0.2,
-            timeConstant:200
+            power: 0.2,
+            timeConstant: 200
           }}
           whileTap={{ cursor: "grabbing" }}
         >
           {memories.length > 0 ? (
             memories.map(memory => (
-              <motion.div className='item' key={memory._id}>
-                <img src={`${api.defaults.baseURL}/${memory.src}`} alt={memory.title} />
+              <motion.div
+                className='item'
+                key={memory._id}
+                onMouseEnter={() => setIsHoveringItem(true)}
+                onMouseLeave={() => setIsHoveringItem(false)}
+                
+                
+                >
+                <img src={`${api.defaults.baseURL}/${memory.src}`}
+                  alt={memory.title} />
                 {/* <p>{memory.title}</p> */}
                 <Link to={`/memories/${memory._id}`}><FaRegComment /></Link>
               </motion.div>

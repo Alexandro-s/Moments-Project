@@ -1,16 +1,33 @@
 /* Home.css */
 
 .Home {
-width: 100%;
-
-min-height: 100vh;
-margin: 0 auto;
-
-
-
-background-color: #1d1b1b;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  background: black url("../assets/home-1.jpg") no-repeat center center;
+  background-size: cover;
 
 }
+
+.Home::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right,
+      rgba(0, 0, 0, 0.85) 20%,
+      rgba(0, 0, 0, 0) 60%,
+      rgba(0, 0, 0, 0) 90%,
+      rgba(0, 0, 0, 0.85) 100%);
+  z-index: 1;
+  pointer-events: none;
+
+}
+
+.Home.no-shadow::before {
+  opacity: 0;
+}
+
 
 .title-carousel {
   margin-bottom: 20px;
@@ -19,26 +36,27 @@ background-color: #1d1b1b;
 
 .title-carousel h2 {
   font-size: 2rem;
-   color:#E6E6FA;
+  color: #E6E6FA;
 }
 
 .carousel {
-  background-color: #1d1b1b;
+
   cursor: grab;
   overflow: hidden;
   display: flex;
-  padding: 2rem; 
+  padding: 2rem;
   margin: 0 auto;
   margin-top: 1rem;
-
 
 }
 
 ::-webkit-scrollbar {
   display: none;
 }
+
 .inner {
   display: flex;
+
 
 }
 
@@ -46,19 +64,24 @@ background-color: #1d1b1b;
   min-width: 500px;
   min-height: 400px;
   padding: 14px;
+
 }
 
 .item:hover {
   transform: scale(1.05);
+
+}
+
+.item:hover::before {
+  opacity: 0;
 }
 
 .item img {
- width: 100%;
- height: 80%;
- pointer-events: none;
+  width: 100%;
+  height: 80%;
+  pointer-events: none;
+
 }
-
-
 
 .item a {
   display: inline-block;
@@ -68,10 +91,6 @@ background-color: #1d1b1b;
   padding: 8px 16px;
   border-radius: 8px;
   transition: background-color 0.3s;
-}
-
-.item a:hover {
-  background-color: #0056b3;
 }
 
 .inner {
